@@ -1,7 +1,10 @@
+[user]
+  name = Joshua Bangel
+  email = falornan@gmail.com
 [init]
   templatedir = ~/.git_template
 [push]
-  default = current
+  default = simple
 [color]
   ui = auto
 [alias]
@@ -19,6 +22,7 @@
   merge-branch = !git checkout master && git merge @{-1}
   pr = !hub pull-request
   rename-branch = !sh -c 'old=$(git current-branch) && git branch -m $old $1 && git push origin --set-upstream $1 && git push origin --delete $old' -
+  s  = status --short
   st = status
   up = !git fetch origin && git rebase origin/master
 [core]
